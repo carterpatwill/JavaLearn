@@ -1,0 +1,53 @@
+/* 1. Center the whole page structure */
+body {
+    display: flex;
+    flex-direction: column;   /* stack header, then container */
+    align-items: center;      /* center everything horizontally */
+    margin: 0;
+}
+
+/* 2. Keep the header centered at the top */
+h1 {
+    margin-top: 20px;
+}
+.likeBtn{
+    
+}
+
+/* 3. Container holds the left & right columns side-by-side */
+#container {
+    display: flex;
+    width: 100%;              /* full width so both columns split evenly */
+}
+
+/* 4. Left and right columns (each half of the screen) */
+#leftCol, #rightCol {
+    width: 50%;               /* each takes half the screen */
+    display: flex;
+    flex-direction: column;   /* stack posts vertically */
+    align-items: center;      /* center posts horizontally */
+    gap: 20px;                /* space between posts */
+    padding: 20px;
+    box-sizing: border-box;   /* prevents padding from messing up width */
+}
+
+/* 5. Each post box */
+.box {
+    width: 250px;
+    background-color: lightgray;
+    border-radius: 15px;
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;   /* put image above row */
+    align-items: center;
+    padding: 10px;
+}
+
+/* 6. Row that holds the comment + button horizontally */
+.row {
+    display: flex;
+    flex-direction: row;      /* comment → button (left to right) */
+    justify-content: center;
+    gap: 10px;
+}
